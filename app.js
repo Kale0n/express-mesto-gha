@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 app.use('/users', userRouter)
 app.use('/cards', cardRouter)
 app.patch('*', function(req, res){
-  res.send('what???', 404);
+  res.status(404).send({message: "Страница не найдена"});
 });
 
 app.listen(PORT, () => {
