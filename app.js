@@ -21,8 +21,12 @@ app.use((req, res, next) => {
 
   next();
 });
+
 app.use('/users', userRouter)
 app.use('/cards', cardRouter)
+app.patch('*', function(req, res){
+  res.send('what???', 404);
+});
 
 app.listen(PORT, () => {
     // Если всё работает, консоль покажет, какой порт приложение слушает
