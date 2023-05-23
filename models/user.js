@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { isValidHttpUrl } = require('../utils/validation')
+const { isValidHttpUrl } = require('../utils/validation');
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -19,9 +19,9 @@ const userSchema = new mongoose.Schema({
     required: true,
     validate: {
       validator: isValidHttpUrl,
-      message: 'Неправильный формат ссылки'
-    }
-  }
+      message: 'Неправильный формат ссылки',
+    },
+  },
 });
 
 module.exports = mongoose.model('user', userSchema);

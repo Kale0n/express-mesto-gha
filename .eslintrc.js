@@ -1,19 +1,17 @@
 module.exports = {
-    "env": {
-        "es2021": true
-    },
-    "extends": "airbnb-base",
-    "overrides": [
+  env: {
+    es2021: true,
+  },
+  extends: 'airbnb-base',
+  overrides: [
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  rules: {
+    'no-underscore-dangle': [
+      'error', { allow: ['_id'] },
     ],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": [
-        "vue"
-    ],
-    "rules": {
-    },
-    "allow": ["_id"]
-
-}
+  },
+};

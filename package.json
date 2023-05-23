@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "lint": "npx eslint"
+    "lint": "npx eslint ./"
   },
   "repository": {
     "type": "git",
@@ -21,13 +21,11 @@
   "homepage": "https://github.com/Kale0n/express-mesto-gha#readme",
   "devDependencies": {
     "eslint": "^8.40.0",
-    "eslint-plugin-vue": "^9.12.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
     "nodemon": "^2.0.22"
   },
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5",
     "express": "^4.18.2",
     "mongoose": "^7.1.1"
   }

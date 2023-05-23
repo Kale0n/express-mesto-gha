@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { isValidHttpUrl } = require('../utils/validation')
+const { isValidHttpUrl } = require('../utils/validation');
 
 const cardSchema = new mongoose.Schema({
   name: {
@@ -13,18 +13,22 @@ const cardSchema = new mongoose.Schema({
     required: true,
     validate: {
       validator: isValidHttpUrl,
-      message: 'Неправильный формат ссылки'
-    }
+      message: 'Неправильный формат ссылки',
+    },
   },
   owner: {
     type: mongoose.ObjectId,
+    ref: 'user',
     required: true,
   },
-  likes: [mongoose.ObjectId],
+  likes: {
+    type: [{ type: mongoose.ObjectId, ref: 'user' }],
+    default: [],
+  },
   createdAt: {
     type: Date,
     default: Date.now,
-  }
+  },
 });
 
 module.exports = mongoose.model('card', cardSchema);
