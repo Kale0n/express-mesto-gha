@@ -27,7 +27,7 @@ module.exports.deleteCard = (req, res, next) => {
       } else if (card.owner.toString() !== req.user._id) {
         throw new WrongUserError('Вы не являетесь хозяином карточки');
       }
-      Card.findByIdAndRemove(req.params.cardId);
+      return Card.findByIdAndRemove(req.params.cardId);
     })
     .then(() => res.send({ message: 'Пост удален' }))
     .catch(next);
