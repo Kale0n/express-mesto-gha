@@ -6,8 +6,8 @@ const {
   HTTP_STATUS_CONFLICT, // 409
 } = http2.constants;
 
+// eslint-disable-next-line no-unused-vars
 module.exports.errorsHandler = ((err, req, res, next) => {
-  console.log(err);
   let statusCode = HTTP_STATUS_INTERNAL_SERVER_ERROR;
   let message;
   if (err.code === 11000) {
