@@ -1,14 +1,13 @@
-[![Tests](../../actions/workflows/tests-13-sprint.yml/badge.svg)](../../actions/workflows/tests-13-sprint.yml) [![Tests](../../actions/workflows/tests-14-sprint.yml/badge.svg)](../../actions/workflows/tests-14-sprint.yml)
-# Проект Mesto фронтенд + бэкенд
-Сылка на [проект](https://github.com/Kale0n/express-mesto-gha)
+# express-mesto-gha
+Данный репозиторий содержит бэкенд для проекта Mesto. 
 
-## Директории
+## Технологии
 
-`/routes` — папка с файлами роутера  
-`/controllers` — папка с файлами контроллеров пользователя и карточки   
-`/models` — папка с файлами описания схем пользователя и карточки  
-  
-Остальные директории вспомогательные, создаются при необходимости разработчиком
+Бэкенд написан на Express.js. 
+
+Подключена база данных Mongo 
+
+Сервер создан в помощью Nginx
 
 ## Запуск проекта
 
